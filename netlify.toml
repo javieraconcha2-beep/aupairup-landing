@@ -1,0 +1,5 @@
+[build]
+  publish = "public"
+  command = "node scripts/review-gate.cjs"
+  # Review branch: skip automatic builds; hooks are also stopped by review-gate.
+  ignore = "exit 0"

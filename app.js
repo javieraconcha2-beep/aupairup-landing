@@ -94,9 +94,7 @@ function AuPairUpLanding() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Send to your email service here
-    console.log('Submitted:', { email, userType });
-    alert('Thanks for joining the waitlist! We\'ll be in touch soon.');
+    alert('Registration is not open yet. No information has been submitted or saved.');
   };
 
   const toggleFamilyQ1 = (option) => {
@@ -134,14 +132,15 @@ function AuPairUpLanding() {
             React.createElement('span', {style: {color: '#F9ABE7'}}, 'Up')
           )
         ),
-        React.createElement('div', {className: 'flex gap-8 items-center'},
+        React.createElement('div', {className: 'flex flex-wrap gap-4 items-center'},
+          React.createElement('a', {href: '/blog/', className: 'text-gray-700 font-medium'}, 'Blog'),
           React.createElement('a', {href: '#aupairs', className: 'text-gray-700 hover:text-gray-900 font-medium transition-colors'}, 'For Au Pairs'),
           React.createElement('a', {href: '#families', className: 'text-gray-700 hover:text-gray-900 font-medium transition-colors'}, 'For Families'),
           React.createElement('a', {
             href: '#join',
             className: 'px-6 py-2.5 rounded-full font-semibold text-white transition-all hover:shadow-lg',
             style: {background: 'linear-gradient(135deg, #8383FF 0%, #F9ABE7 100%)'}
-          }, 'Join Waitlist')
+          }, 'Launch status')
         )
       )
     ),
@@ -167,45 +166,26 @@ function AuPairUpLanding() {
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text'
               }
-            }, 'The first app revolutionizing how au pairs and families connect')
+            }, 'A matching platform for au pairs and host families')
           ),
           
-          // Member counter
-          React.createElement('div', {className: 'inline-flex items-center gap-3 bg-gradient-to-r from-purple-50 to-pink-50 px-6 py-4 rounded-full'},
-            React.createElement(Users, {className: 'w-5 h-5', style: {color: '#8383FF'}}),
-            React.createElement('div', null,
-              React.createElement('p', {className: 'text-sm text-gray-600'}, 'Join our community'),
-              React.createElement('p', {className: 'text-2xl font-bold', style: {color: '#8383FF'}}, `${memberCount} / 2,000`)
-            )
-          ),
-
-          // Progress bar
-          React.createElement('div', {className: 'space-y-2'},
-            React.createElement('div', {className: 'h-2 bg-gray-100 rounded-full overflow-hidden'},
-              React.createElement('div', {
-                className: 'h-full rounded-full transition-all duration-500',
-                style: {
-                  width: `${(memberCount / 2000) * 100}%`,
-                  background: 'linear-gradient(90deg, #8383FF 0%, #F9ABE7 100%)'
-                }
-              })
-            ),
-            React.createElement('p', {className: 'text-sm text-gray-500'}, `${2000 - memberCount} spots remaining for founding members`)
+          React.createElement('p', {className: 'text-lg text-gray-600'},
+            'AuPairUp is in preparation. Registration is not open on this review page.'
           ),
 
           // Benefits
           React.createElement('div', {className: 'grid grid-cols-3 gap-4 pt-4'},
             React.createElement('div', {className: 'text-center p-4 rounded-2xl bg-gradient-to-br from-purple-50 to-transparent'},
               React.createElement(Heart, {className: 'w-8 h-8 mx-auto mb-2', style: {color: '#F9ABE7'}}),
-              React.createElement('p', {className: 'text-sm font-medium text-gray-700'}, 'No endless searching')
+              React.createElement('p', {className: 'text-sm font-medium text-gray-700'}, 'Share expectations')
             ),
             React.createElement('div', {className: 'text-center p-4 rounded-2xl bg-gradient-to-br from-pink-50 to-transparent'},
               React.createElement(Users, {className: 'w-8 h-8 mx-auto mb-2', style: {color: '#8383FF'}}),
-              React.createElement('p', {className: 'text-sm font-medium text-gray-700'}, 'Match instantly')
+              React.createElement('p', {className: 'text-sm font-medium text-gray-700'}, 'Explore compatibility')
             ),
             React.createElement('div', {className: 'text-center p-4 rounded-2xl bg-gradient-to-br from-purple-50 to-transparent'},
               React.createElement(Globe, {className: 'w-8 h-8 mx-auto mb-2', style: {color: '#F9ABE7'}}),
-              React.createElement('p', {className: 'text-sm font-medium text-gray-700'}, 'Connect globally')
+              React.createElement('p', {className: 'text-sm font-medium text-gray-700'}, 'Start a conversation')
             )
           )
         )
@@ -217,7 +197,7 @@ function AuPairUpLanding() {
       React.createElement('div', {className: 'max-w-7xl mx-auto px-6'},
         React.createElement('div', {className: 'text-center mb-16'},
           React.createElement('h2', {className: 'text-5xl font-bold mb-4', style: {color: '#8383FF'}}, 'How It Works'),
-          React.createElement('p', {className: 'text-xl text-gray-600'}, 'Finding your perfect match is as easy as 1-2-3')
+          React.createElement('p', {className: 'text-xl text-gray-600'}, 'The planned matching experience — features are in preparation')
         ),
 
         React.createElement('div', {className: 'grid md:grid-cols-4 gap-8'},
@@ -225,7 +205,7 @@ function AuPairUpLanding() {
             {icon: User, title: 'Create Profile', desc: 'Share your story, experience, and what you\'re looking for'},
             {icon: MousePointer2, title: 'Swipe & Match', desc: 'Browse profiles and swipe right when you find someone special'},
             {icon: MessageCircle, title: 'Connect', desc: 'Chat with your matches and get to know each other'},
-            {icon: Home, title: 'Start Journey', desc: 'Begin your au pair adventure with the perfect family'}
+            {icon: Home, title: 'Discuss next steps', desc: 'Check expectations and the requirements that apply to each of you'}
           ].map((step, i) =>
             React.createElement('div', {
               key: i,
@@ -250,11 +230,11 @@ function AuPairUpLanding() {
       React.createElement('div', {className: 'max-w-6xl mx-auto px-6'},
         React.createElement('div', {className: 'text-center mb-12'},
           React.createElement('h2', {className: 'text-5xl font-bold mb-4', style: {color: '#8383FF'}}, 'For Au Pairs'),
-          React.createElement('p', {className: 'text-xl text-gray-600'}, '100% Free')
+          React.createElement('p', {className: 'text-xl text-gray-600'}, 'Access and pricing will be confirmed before launch')
         ),
         
         React.createElement('div', {className: 'grid md:grid-cols-3 gap-8 mb-12'},
-          [{icon: Zap, title: 'Match Faster'}, {icon: Gift, title: 'Always Free'}, {icon: Globe, title: 'Go Global'}].map((feat, i) =>
+          [{icon: Zap, title: 'Mutual interest'}, {icon: Gift, title: 'Clear expectations'}, {icon: Globe, title: 'Cultural exchange'}].map((feat, i) =>
             React.createElement('div', {key: i, className: 'text-center p-6 rounded-3xl bg-gradient-to-br from-purple-50 to-transparent'},
               React.createElement(feat.icon, {className: 'w-12 h-12 mx-auto mb-4', style: {color: '#8383FF'}}),
               React.createElement('h3', {className: 'text-xl font-bold mb-2'}, feat.title)
@@ -269,7 +249,7 @@ function AuPairUpLanding() {
       React.createElement('div', {className: 'max-w-6xl mx-auto px-6'},
         React.createElement('div', {className: 'text-center mb-12'},
           React.createElement('h2', {className: 'text-5xl font-bold mb-4', style: {color: '#F9ABE7'}}, 'For Families'),
-          React.createElement('p', {className: 'text-xl text-gray-600'}, 'Find your perfect match with confidence')
+          React.createElement('p', {className: 'text-xl text-gray-600'}, 'Get to know potential au pairs and discuss expectations')
         )
       )
     ),
@@ -281,10 +261,12 @@ function AuPairUpLanding() {
           'We know what it takes to move abroad — and to trust someone new at home.'
         ),
         React.createElement('p', {className: 'text-2xl text-gray-600 mb-12'}, 
-          'That\'s why we built AuPairUp — made for real people, living real life.'
+          'We are preparing AuPairUp to help au pairs and families get to know each other.'
         ),
 
-        React.createElement('form', {onSubmit: handleSubmit, className: 'max-w-md mx-auto mb-8'},
+        React.createElement('form', {onSubmit: handleSubmit, className: 'max-w-md mx-auto mb-8', 'aria-label': 'Registration preview — not available yet'},
+          React.createElement('fieldset', {disabled: true},
+          React.createElement('legend', {className: 'text-gray-600 mb-4'}, 'Registration preview. No information is collected.'),
           React.createElement('div', {className: 'space-y-4'},
             React.createElement('div', {className: 'flex gap-4'},
               React.createElement('button', {
@@ -312,22 +294,18 @@ function AuPairUpLanding() {
               type: 'submit',
               className: 'w-full py-4 rounded-full font-bold text-white text-lg shadow-lg hover:shadow-xl transition-all',
               style: {background: 'linear-gradient(135deg, #8383FF 0%, #F9ABE7 100%)'}
-            }, 'Claim Early Access')
+            }, 'Registration not open')
+          )
           )
         ),
 
         React.createElement('p', {className: 'text-lg text-gray-600 mb-8 max-w-2xl mx-auto'},
-          'Be the first to try it — created to make finding the right match feel simple, human, and mutual. ',
-          React.createElement('span', {className: 'font-semibold', style: {color: '#8383FF'}}, 'First month free for early members.')
+          'AuPairUp facilitates matching only. We do not arrange placements, visas or contracts. ',
+          React.createElement('span', {className: 'font-semibold', style: {color: '#8383FF'}}, 'Launch details will be announced after validation.')
         ),
 
-        React.createElement('div', {className: 'inline-flex items-center gap-3 bg-gradient-to-r from-purple-50 to-pink-50 px-6 py-4 rounded-full'},
-          React.createElement(Users, {className: 'w-5 h-5', style: {color: '#8383FF'}}),
-          React.createElement('p', {className: 'text-lg'},
-            React.createElement('span', {className: 'font-bold', style: {color: '#8383FF'}}, memberCount),
-            React.createElement('span', {className: 'text-gray-600'}, ' / 2,000 joined')
-          )
-        )
+        React.createElement('p', {className: 'text-gray-600'}, 'Explore our guides while we prepare the platform.')
+
       )
     ),
 
@@ -364,7 +342,7 @@ function AuPairUpLanding() {
             )
           )
         ),
-        React.createElement('div', {className: 'text-center mt-8 text-sm text-gray-500'}, '© 2025 AuPairUp. All rights reserved.')
+        React.createElement('div', {className: 'text-center mt-8 text-sm text-gray-500'}, '© 2026 AuPairUp. All rights reserved.')
       )
     )
   );
@@ -373,3 +351,4 @@ function AuPairUpLanding() {
 // Render the app
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(React.createElement(AuPairUpLanding));
+
